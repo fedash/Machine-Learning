@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 np.random.seed(520)
 
 # -----------------------
-# QUESTION 2.A
+# PCA From Scratch 
 # -----------------------
 
 # Import the data
@@ -107,10 +107,6 @@ pc1, pc2 = pca(x = food, k = k)
 # Visualize the result
 # Use country names as labels:
 visualize_two_pcs(pc1 = pc1, pc2 = pc2, labels = country_labels)
-
-# -----------------------
-# QUESTION 2.B
-# -----------------------
 
 # Features (rows)
 transposed = np.transpose(food)
