@@ -15,10 +15,6 @@ m,n = img_row.shape
 k=2
 
 # -----------------------
-# QUESTION 3.A
-# -----------------------
-
-# -----------------------
 # Define the functions
 # -----------------------
 
@@ -112,9 +108,6 @@ e = 12
 A = wnn_graph(data = img_row, epsilon = e, max_dist = 30)
 visualize_wnng(A = A, data = img_row, epsilon = e)
 
-# -----------------------
-# QUESTION 3.B
-# -----------------------
 #----Implement ISOMAP----
 def run_isomap(A, k):
     # 1. Pairwise shortest dist matrix D 698*698
@@ -165,11 +158,7 @@ Z = run_isomap(A = A, k = k)
 visualize_isomap_or_pca(Z = Z, data = img_row, epsilon = e)
 
 
-# -----------------------
-# QUESTION 3.C
-# -----------------------
-
-#----PCA----
+#----PCA Comparison----
 def run_pca(data,k):
     covariance_mat = (data.T @ data) / (data.shape[0])
     #S, W = ll.eigs(covariance_mat, k = k, which='LM')
