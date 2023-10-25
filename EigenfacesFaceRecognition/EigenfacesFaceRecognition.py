@@ -29,10 +29,6 @@ sub2_paths = ['data/yalefaces/subject02.glasses.gif',
               'data/yalefaces/subject02-test.gif']
 
 
-# -----------------------
-# QUESTION 4.A
-# -----------------------
-
 #Original shape of images:
 original_shape = Image.open(sub1_paths[0]).size
 factor = 4
@@ -110,9 +106,6 @@ def plot_eigenfaces(sub1_reshaped, sub2_reshaped):
     return plt.show()
 plot_eigenfaces(sub1_reshaped_result, sub2_reshaped_result)
 
-# -----------------------
-# QUESTION 4.B
-# -----------------------
 face1 = sub1_eigenfaces[0]
 face2 = sub2_eigenfaces[0]
 
