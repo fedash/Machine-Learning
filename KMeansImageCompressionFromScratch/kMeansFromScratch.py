@@ -200,12 +200,6 @@ for img_path in np.array(['football.bmp', 'hestain.bmp', 'lake.bmp']):
 
 
 
-# -----------------------
-# QUESTION 3.3
-# -----------------------
-
-
-
 # ---------- Calculating WCSS ----------
 def calculate_wcss(pixels, cluster_result, centroid_result):
     wcss = 0
@@ -220,8 +214,6 @@ def calculate_wcss(pixels, cluster_result, centroid_result):
 
 
 # ---------- Get WCSS for different k to find the best one ----------
-#*NOTE* For the report I used k values from 2 to 30 for each image,
-#       which runs for ~12 mins due to high k and many iterations.
 
 k_arr = np.arange(2, 7)
 wcss_results = {'football.bmp': [], 'hestain.bmp': [], 'lake.bmp': []}
