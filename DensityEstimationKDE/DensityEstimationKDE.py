@@ -12,10 +12,6 @@ np.random.seed(123)
 # Import the data
 data = pd.read_csv("data/n90pol.csv")
 
-# -----------------------
-# QUESTION 5.A
-# -----------------------
-
 n = len(data['amygdala'])
 amygdala = data['amygdala']
 acc = data['acc']
@@ -104,9 +100,6 @@ kde_acc = kde_1d(data=acc, best_bandwidth=bandwidth_acc, var_name='ACC')
 # -----------x-----------
 
 
-# -----------------------
-# QUESTION 5.B
-# -----------------------
 
 def hist_2d(data, var_name1, var_name2):
     #Square root rule to choose # of bins
@@ -157,9 +150,6 @@ hist_2d_in_3d(data=amyglada_acc, var_name1='AMYGLDALA', var_name2='ACC')
 # -----------x-----------
 
 
-# -----------------------
-# QUESTION 5.C
-# -----------------------
 def cv_bandwidth_for_two(data, cv):
     var1 = data.iloc[:,0].values
     var2 = data.iloc[:,1].values
@@ -249,11 +239,6 @@ mut_inf = mutual_info_regression(amygdala.values.reshape(-1, 1), acc.values)
 print(f'Estimated mutual information shared by Amygdala and Acc: {mut_inf[0]:.4f}')
 # -----------x-----------
 
-
-# -----------------------
-# QUESTION 5.D
-# -----------------------
-
 # ----Implementation----
 #subsets for each c
 data_c2 = data[data['orientation'] == 2]
@@ -293,11 +278,6 @@ acc_means = [data_c2['acc'].mean(), data_c3['acc'].mean(), data_c4['acc'].mean()
 sample_means = pd.DataFrame({'AMYGDALA': amygdala_means, 'ACC': acc_means}, index=['c=2', 'c=3', 'c=4', 'c=5'])
 print(sample_means)
 # -----------x-----------
-
-
-# -----------------------
-# QUESTION 5.E
-# -----------------------
 
 # ----Implementation----
 band_acc_amygdala_c2 = cv_bandwidth_for_two(data=data_c2, cv=LeaveOneOut())
