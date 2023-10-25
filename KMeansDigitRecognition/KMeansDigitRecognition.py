@@ -8,7 +8,7 @@ mat = scipy.io.loadmat('mnist_10digits.mat')
 random.seed(3680)
 
 # -----------------------
-# QUESTION 4.1
+# K Means for handwritten digt recognition
 # -----------------------
 
 k=10
@@ -132,12 +132,6 @@ pur_e, purdf_e = get_purity(original_c_euclidean)
 print(purdf_e)
 w_pur_e = np.sum(purdf_e['Purity'] * purdf_e['Cluster Size']) / np.sum(purdf_e['Cluster Size'])
 print(f'Weighted average purity, L2-norm: {w_pur_e}')
-
-
-
-# -----------------------
-# QUESTION 4.2
-# -----------------------
 
 # ---------- Get the results using Manhattan distance ----------
 original_c_manhattan = kmeans_purity(k, xtrain_standardized, ytrain, d_metric='manhattan')
