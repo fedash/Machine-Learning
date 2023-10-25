@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 random.seed(1)
 
 # -----------------------
-# QUESTION 5.1
+# Spectral CLustering on a political blogs graph
 # -----------------------
 
 # Import the data
@@ -116,11 +116,6 @@ for k in k_arr:
     s, _ = print_mismatch(nodes_with_edges,2, k, labels)
     print(s)
 
-
-
-# -----------------------
-# QUESTION 5.2
-# -----------------------
 
 # ---------- Repeat the process for k from 2 to 50, visualize total mismatch ----------
 k_arr = np.array(range(2,50))
